@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,6 +25,7 @@ namespace Mastermind_jonathan
         {
             InitializeComponent();
             GenerateRandomCode();
+            OpvullenComboBoxes();
         }
         private void GenerateRandomCode()
         {
@@ -32,5 +34,15 @@ namespace Mastermind_jonathan
             string code = string.Join(",", Enumerable.Range(0, 4).Select(_ => Colors[random.Next(Colors.Length)]));
             this.Title = $"MasterMind ({code})";
         }
+        private void OpvullenComboBoxes()
+        {
+            string[] Colors = { "Rood", "Geel", "Oranje", "Wit", "Groen", "Blauw" };
+
+            ComboBox1.ItemsSource = Colors;
+            ComboBox2.ItemsSource = Colors;
+            ComboBox3.ItemsSource = Colors;
+            ComboBox4.ItemsSource = Colors;
+        }
+        
     }
 }
