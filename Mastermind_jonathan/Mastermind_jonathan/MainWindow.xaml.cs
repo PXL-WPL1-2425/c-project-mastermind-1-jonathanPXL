@@ -55,7 +55,7 @@ namespace Mastermind_jonathan
             Label4.Background = GetBrushFromColorName(ComboBox4.SelectedItem as string);
         }
 
-        // Helper method to convert color names to SolidColorBrush
+        
         private SolidColorBrush GetBrushFromColorName(string colorName)
         {
             switch (colorName)
@@ -66,7 +66,7 @@ namespace Mastermind_jonathan
                 case "Wit": return Brushes.White;
                 case "Groen": return Brushes.Green;
                 case "Blauw": return Brushes.Blue;
-                default: return Brushes.Transparent; // Default fallback
+                default: return Brushes.Transparent; 
             }
         }
 
