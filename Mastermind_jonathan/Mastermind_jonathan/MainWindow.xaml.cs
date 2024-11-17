@@ -23,6 +23,14 @@ namespace Mastermind_jonathan
         public MainWindow()
         {
             InitializeComponent();
+            GenerateRandomCode();
+        }
+        private void GenerateRandomCode()
+        {
+            Random random = new Random();
+            string[] Colors = { "Rood", "Geel", "Oranje", "Wit", "Groen", "Blauw" };
+            string code = string.Join(",", Enumerable.Range(0, 4).Select(_ => Colors[random.Next(Colors.Length)]));
+            this.Title = $"MasterMind ({code})";
         }
     }
 }
