@@ -11,13 +11,22 @@
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,57,0,0" >
 
-            <ComboBox Width="100" Height="30" Name="ComboBox1" />
-
-            <ComboBox Width="100" Height="30" Name="ComboBox2"/>
-
-            <ComboBox Width="100" Height="30" Name="ComboBox3"/>
-
-            <ComboBox Width="100" Height="30" Name="ComboBox4"/>
+            <StackPanel>
+                <ComboBox Width="100" Height="30" Name="ComboBox1" SelectionChanged="ComboBox_SelectionChanged" />
+                <Label Width="100" Height="30" Name="Label1" HorizontalContentAlignment="Center" />
+            </StackPanel>
+            <StackPanel>
+                <ComboBox Width="100" Height="30" Name="ComboBox2" SelectionChanged="ComboBox_SelectionChanged" />
+                <Label Width="100" Height="30" Name="Label2" HorizontalContentAlignment="Center" />
+            </StackPanel>
+            <StackPanel>
+                <ComboBox Width="100" Height="30" Name="ComboBox3" SelectionChanged="ComboBox_SelectionChanged" />
+                <Label Width="100" Height="30" Name="Label3" HorizontalContentAlignment="Center" />
+            </StackPanel>
+            <StackPanel>
+                <ComboBox Width="100" Height="30" Name="ComboBox4" SelectionChanged="ComboBox_SelectionChanged" />
+                <Label Width="100" Height="30" Name="Label4" HorizontalContentAlignment="Center" />
+            </StackPanel>
         </StackPanel>
 
         <Button Content="Check Code" Width="100" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,288,0,0" />

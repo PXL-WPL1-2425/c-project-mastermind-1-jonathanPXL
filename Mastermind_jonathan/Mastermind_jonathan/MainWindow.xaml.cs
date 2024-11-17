@@ -43,6 +43,25 @@ namespace Mastermind_jonathan
             ComboBox3.ItemsSource = Colors;
             ComboBox4.ItemsSource = Colors;
         }
-        
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Label1.Background = GetColorBrush(ComboBox1.SelectedItem as string);
+            Label2.Background = GetColorBrush(ComboBox2.SelectedItem as string);
+            Label3.Background = GetColorBrush(ComboBox3.SelectedItem as string);
+            Label4.Background = GetColorBrush(ComboBox4.SelectedItem as string);
+        }
+        private Brush GetColorBrush(string color)
+        {
+            switch (color)
+            {
+                case "Rood": return Brushes.Red;
+                case "Geel": return Brushes.Yellow;
+                case "Oranje": return Brushes.Orange;
+                case "Wit": return Brushes.White;
+                case "Groen": return Brushes.Green;
+                case "Blauw": return Brushes.Blue;
+                default: return Brushes.Transparent;
+            }
+        }
     }
 }
